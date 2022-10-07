@@ -1,0 +1,11 @@
+{
+    "java.project.sourcePaths": [
+        "Ponto2D",
+        "Eq2g",
+        "Banco/src",
+        "Automovel",
+        "Figura2D",
+        "SPOOtify",
+        "Comboio"
+    ]
+}
