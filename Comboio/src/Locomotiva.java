@@ -2,8 +2,9 @@ package src;
 
 import java.util.ArrayList;
 
+
 public class Locomotiva extends Veiculo_linha {
-    //atributos
+    //atributos 
     private int matricula;
     private double potencia;
     private double desloca_carga;
