@@ -1,3 +1,4 @@
+package domain;
 public class Episodio {
     private int id;
     private String titulo;
