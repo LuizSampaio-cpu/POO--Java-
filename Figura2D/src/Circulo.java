@@ -8,10 +8,18 @@ import Ponto2D.src.Ponto2D;
 public class Circulo extends Figura2D {
     private double raio;
 
-    private Circulo (Ponto2D cg, double raio)
+    private Circulo (Ponto2D cg, double raio) throws Exception
     {
         super(cg);
         this.raio = raio;
+        try{ /*nova exception criada */
+            if(raio <= 0){
+                throw new Exception("Raio inválido");
+            }
+
+        }catch(Exception e){
+            System.out.println(e);
+        }
     }
 
 

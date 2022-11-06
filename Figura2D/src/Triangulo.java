@@ -7,11 +7,20 @@ public class Triangulo extends Figura2D {
     private Ponto2D v2;
     private Ponto2D v3;
    
-    public Triangulo(Ponto2D cg, Ponto2D v1, Ponto2D v2, Ponto2D v3) {
+    public Triangulo(Ponto2D cg, Ponto2D v1, Ponto2D v2, Ponto2D v3) throws Exception{
         super(cg);
         this.v1 = v1;
         this.v2 = v2;
         this.v3 = v3;
+        try{ /*nova exception criada */
+            if((v1.distancia(v2) + v1.distancia(v3) > v2.distancia(v3) && 
+            v1.distancia(v2) + v2.distancia(v3) > v1.distancia(v3) && 
+            v1.distancia(v3) + v2.distancia(v3) > v1.distancia(v2)) == false ){
+                throw new Exception("os lados recebidos não formam trinângulo");
+            }
+        }catch(Exception e){
+            System.out.println(e);
+        }
     }
 
     public double area()
