@@ -2,20 +2,24 @@ package src;
 
 import Ponto2D.src.Ponto2D;
 
-public class Figura2D {
+public  abstract class Figura2D {
     private Ponto2D cg;
 
     public Figura2D(Ponto2D cg)
     {
         this.cg = cg;
     }
-    public double area ()
-    {
-        return 0;
+    public abstract double area();
+    public abstract double perimetro();
+    
+    
+    public Ponto2D getCg() {
+        return cg;
     }
-    public double perimetro()
-    {
-        return 0;
+    public void setCg(Ponto2D cg) {
+        this.cg = cg;
     }
-    System.out.println(cg);
+    
+   
+   
 }
