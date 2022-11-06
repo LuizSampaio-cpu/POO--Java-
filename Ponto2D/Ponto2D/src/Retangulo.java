@@ -1,13 +1,23 @@
 package Ponto2D.src;
 
+
+
 public class Retangulo {
     private Ponto2D verticeES;
     private Ponto2D verticeDI;
 
 
-    public Retangulo (Ponto2D es, Ponto2D di){
+    public Retangulo (Ponto2D es, Ponto2D di) throws Exception{
         verticeES = es;
         verticeDI = di;
+        try { /*nova exception criada*/
+            if(area() == 0)
+            {
+                throw new Exception("Area igual a zero");
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
     public Ponto2D getES()

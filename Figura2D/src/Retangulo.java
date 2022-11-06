@@ -2,50 +2,72 @@ package src;
 
 import Ponto2D.src.Ponto2D;
 
-public class Retangulo extends Figura2D{
+public class Retangulo {
+    private Ponto2D verticeES;
+    private Ponto2D verticeDI;
 
-    private Ponto2D ES;
-    private Ponto2D DI;
 
-    public Retangulo(Ponto2D cg, Ponto2D eS, Ponto2D dI) throws Exception{
-        super(cg);
-        ES = eS;
-        DI = dI;
-        try{ /*nova Excpetion criada */
-            if (area() == 0)
+    public Retangulo (Ponto2D es, Ponto2D di) throws Exception{
+        verticeES = es;
+        verticeDI = di;
+        try { /*nova exception criada*/
+            if(area() == 0)
             {
-                throw new Exception("Area do retangulo igual a zero");
+                throw new Exception("Area igual a zero");
             }
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e);
-        };
+        }
     }
 
-    public Ponto2D getES() {
-        return ES;
-    }
-    public void setES(Ponto2D eS) {
-        ES = eS;
-    }
-    public Ponto2D getDI() {
-        return DI;
-    }
-    public void setDI(Ponto2D dI) {
-        DI = dI;
-    }
-
-    public double area()
+    public Ponto2D getES()
     {
-       double altura = ES.getY() - DI.getY();
-       double base = ES.getX() - DI.getX();
-       return base * altura;
+        return verticeES;
     }
+
+    public Ponto2D getDI()
+    {
+        return verticeDI;
+    }
+
+    public Ponto2D getDS()
+    {
+        return new Ponto2D(verticeDI.getX(),verticeES.getY());
+    }
+    public Ponto2D getEI()
+    {
+        return new Ponto2D(verticeES.getX(), verticeDI.getY());
+    }
+
     public double perimetro()
     {
-        double altura = ES.getY() - DI.getY();
-        double base = ES.getX() - DI.getX();
-        return (base + altura) * 2;
+        double altura = Math.abs(verticeES.getY()) - Math.abs(verticeDI.getY());
+        double largura = Math.abs(verticeES.getX()) - Math.abs(verticeDI.getX());
+        return ((largura + altura) * 2);
     }
-    
+    public double area()
+    {
+        double altura = Math.abs(verticeES.getY()) - Math.abs(verticeDI.getY());
+        double largura = Math.abs(verticeES.getX()) - Math.abs(verticeDI.getX());
+        return (largura * altura);
+    }
+    public boolean is_quadrado()
+    {
+        double altura = Math.abs(verticeES.getY()) - Math.abs(verticeDI.getY());
+        double largura = Math.abs(verticeES.getX()) - Math.abs(verticeDI.getX());
+        return altura == largura;
+    }
+    public boolean pertence(Ponto2D p)
+    {
+        boolean in = (p.getX() >= verticeES.getX() && p.getX() <= verticeDI.getX() && p.getY()
+        >= verticeES.getY() && p.getY() <= verticeDI.getY());
+        return in;
+    }
+
+    public String ToString()
+    {
+        String s = "Canto ES: "+ verticeES.toString() + "\n";
+        s = s + "Canto DI: "+ verticeDI.toString() + "\n";
+        return s;
+    }
 }

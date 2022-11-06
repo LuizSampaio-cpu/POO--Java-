@@ -1,8 +1,9 @@
 package Ponto2D.src;
 
+
 public class TestaRetangulo {
     
-   public static void main(String[] args) { 
+   public static void main(String[] args) throws Exception{ 
     Retangulo r1 = new Retangulo(new Ponto2D(50, 50), new Ponto2D(100, 85));
 
     Ponto2D p1 = new Ponto2D(72, 65);
