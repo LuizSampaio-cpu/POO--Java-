@@ -9,13 +9,22 @@ public abstract class Veiculo_linha {
     private int peso_max;
 
     //constructor
-    public Veiculo_linha (int peso, int largura, int altura, int comp, int peso_max)
+    public Veiculo_linha (int peso, int largura, int altura, int comp, int peso_max) throws Exception
     {
         this.peso = peso;
         this.largura = largura;
         this.altura = altura;
         this.comp = comp;
         this.peso_max = peso_max;
+        try{
+            if ((peso <= 0) || (largura <= 0) || (altura <= 0) || (comp <= 0) || (peso_max <= 0)){
+                throw new Exception("Dados negativos nao sao permitidos");
+            }
+        }catch(Exception e)
+        {
+            System.out.println(e);
+        }
+
     }
 
     //métodos

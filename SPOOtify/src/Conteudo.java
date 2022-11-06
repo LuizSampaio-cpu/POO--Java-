@@ -1,5 +1,6 @@
 package src;
 
+
 public abstract class Conteudo{
     //atributos
     private String titulo;
@@ -7,10 +8,18 @@ public abstract class Conteudo{
     private double duracao;
 
     //constructor
-    public Conteudo (String titulo, double duracao)
+    public Conteudo (String titulo, double duracao) throws Exception
     {
         this.titulo = titulo;
         this.duracao = duracao;
+        try{ /*nova excpetion criada*/
+            if(titulo == null || duracao == 0)
+            {
+                throw new Exception("Dados de conetudo invalidos");
+            }
+        }catch(Exception e){
+            System.out.println(e);
+        }
     }
 
     //metodos
