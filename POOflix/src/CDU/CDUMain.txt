@@ -1,0 +1,13 @@
+package CDU;
+
+import UI;
+import domain;
+
+public class CDUMain {
+    private FormMain FormMain;
+
+    public CDUMain(FormMain FormMain)
+    {
+        
+    }
+}
