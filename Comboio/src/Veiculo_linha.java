@@ -16,7 +16,7 @@ public abstract class Veiculo_linha {
         this.altura = altura;
         this.comp = comp;
         this.peso_max = peso_max;
-        try{
+        try{ /*nova exception criada */
             if ((peso <= 0) || (largura <= 0) || (altura <= 0) || (comp <= 0) || (peso_max <= 0)){
                 throw new Exception("Dados negativos nao sao permitidos");
             }
