@@ -1,7 +1,7 @@
 package UI;
 
 import java.io.Console;
-import CDU;
+import CDU.*;
 
 
 public class FormSerie extends Form {
@@ -29,7 +29,7 @@ public class FormSerie extends Form {
 
             if(!termina)
             {
-                cducs.salvarSerie();
+                cducs.salvaSerie();
             }
         }
 
@@ -47,5 +47,22 @@ public class FormSerie extends Form {
         return idademin;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public void setIdademin(String idademin) {
+        this.idademin = idademin;
+    }
+
+    public void setCDU(CDUcadastraSerie cducs)
+    {
+        this.cducs = cducs;
+    }
+    
 
 }

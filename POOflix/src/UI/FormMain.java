@@ -2,7 +2,7 @@ package UI;
 
 import java.io.Console;
 
-import CDU;
+import CDU.*;
 
 
 public class FormMain extends Form{
