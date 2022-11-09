@@ -3,27 +3,30 @@ package domain;
 import java.util.LinkedList;
 
 public class Episodio {
-    private int id;
+    private String id;
     private String titulo;
     private String resumo;
     private int temporada;
     private LinkedList<Performance> performances;
+    private Serie serie;
 
 
-    public Episodio (int id, String titulo, String resumo, int temporada, LinkedList<Performance> performances)
+    public Episodio (String id, String titulo, String resumo, int temporada, LinkedList<Performance> performances, Serie serie)
     {
         this.id = id;
         this.titulo = titulo;
         this.resumo = resumo;
         this.temporada = temporada;
         this.performances = performances;
+        this.serie = serie;
     }
     
-    public int getId() {
+    
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -56,6 +59,21 @@ public class Episodio {
     public void setPerformances(LinkedList<Performance> performances) {
         this.performances = performances;
     }
+    public Serie getSerie() {
+        return serie;
+    }
+    public void setSerie(Serie serie) {
+        if(serie == null)
+            this.serie = serie;
+    }
 
+    public String toString()
+    {
+        String s = "";
+        s = "id: "+getId()+";\n";
+        s = s+"Titulo: "+getTitulo()+";\n";
+        s = s+String.valueOf(temporada);
+        return s;
+    }
     
 }

@@ -1,28 +1,32 @@
 package domain;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 
 public class Serie {
-    private int id;
+    private String id;
     private String titulo;
     private int clas_idade;
-    private LinkedList<Episodio> episodios;
-    private Categoria cat;
-
-    public Serie (int id, String titulo, int clas_idade, LinkedList<Episodio> episodios, Categoria cat)
+    private HashMap<String, Episodio> episodios;
+    private LinkedList<Categoria> cat;
+    public Serie (String id, String titulo, int clas_idade, HashMap<String, Episodio> episodios, LinkedList<Categoria> cat)
     {
         this.id = id;
         this.titulo = titulo;
         this.clas_idade = clas_idade;
-        this.episodios = episodios;
-        this.cat = cat;
+        episodios = new HashMap<String, Episodio>();
+        cat = new LinkedList<Categoria>();
+    }
+    public void addpeisodio(Episodio e)
+    {
+        episodios.put(e.getId(),e);
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -42,23 +46,27 @@ public class Serie {
         this.clas_idade = clas_idade;
     }
 
-    public LinkedList<Episodio> getEpisodios() {
-        return episodios;
+
+    public String[] getCat() {
+        String[] array = new String[cat.size()];
+        for (int i = 0; i < cat.size(); i++){
+            array[i] =String.valueOf(cat.get(i));
+        }
+        return array;
     }
 
-    public void setEpisodios(LinkedList<Episodio> episodios) {
-        this.episodios = episodios;
-    }
-
-    public Categoria getCat() {
-        return cat;
-    }
-
-    public void setCat(Categoria cat) {
-        this.cat = cat;
+    public void setCat(Categoria categoria) {
+        cat.add(categoria);
     }
     
-
+    public String toString()
+    {
+        String s = "";
+        s = "id: "+ id + ";\n";
+        s = s + "Titulo: "+getTitulo()+";\n";
+        s = s + "Classe etária: "+getClass()+";\n";
+        return s;
+    }
 
 
 

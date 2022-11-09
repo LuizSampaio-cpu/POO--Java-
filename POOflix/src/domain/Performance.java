@@ -3,12 +3,12 @@ package domain;
 public class Performance {
     private Ator ator;
     private int idpersonagem;
-    private int idepisodio;
+    private Episodio episodio;
 
-    public Performance(Ator ator, int idpersonagem, int idepisodio) {
+    public Performance(Ator ator, int idpersonagem, Episodio episodio) {
         this.ator = ator;
         this.idpersonagem = idpersonagem;
-        this.idepisodio = idepisodio;
+        this.episodio = episodio;
     }
     public Ator getAtor() {
         return ator;
@@ -22,11 +22,11 @@ public class Performance {
     public void setIdpersonagem(int idpersonagem) {
         this.idpersonagem = idpersonagem;
     }
-    public int getIdepisodio() {
-        return idepisodio;
+    public Episodio getepisodio() {
+        return episodio;
     }
-    public void setIdepisodio(int idepisodio) {
-        this.idepisodio = idepisodio;
+    public void setIdepisodio(Episodio episodio) {
+        this.episodio = episodio;
     }
 
     

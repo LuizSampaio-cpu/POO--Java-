@@ -12,7 +12,8 @@ public class Ator {
         this.id = id;
         this.nome = nome;
         this.nacionalidade = nacionalidade;
-        this.trabalhos = trabalhos;
+        trabalhos = new LinkedList<Performance>();
+
     }
 
     public int getId() {
@@ -47,5 +48,8 @@ public class Ator {
         this.trabalhos = trabalhos;
     }
 
-    
+    public void addPerformance(Performance p)
+    {
+        trabalhos.add(p);
+    }
 }
