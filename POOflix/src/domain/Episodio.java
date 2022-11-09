@@ -6,19 +6,18 @@ public class Episodio {
     private String id;
     private String titulo;
     private String resumo;
-    private int temporada;
+    private String temporada;
     private LinkedList<Performance> performances;
     private Serie serie;
 
 
-    public Episodio (String id, String titulo, String resumo, int temporada, LinkedList<Performance> performances, Serie serie)
+    public Episodio (String id, String titulo, String temporada, String resumo)
     {
         this.id = id;
         this.titulo = titulo;
         this.resumo = resumo;
         this.temporada = temporada;
-        this.performances = performances;
-        this.serie = serie;
+
     }
     
     
@@ -46,11 +45,11 @@ public class Episodio {
         this.resumo = resumo;
     }
 
-    public int getTemporada() {
+    public String getTemporada() {
         return temporada;
     }
 
-    public void setTemporada(int temporada) {
+    public void setTemporada(String temporada) {
         this.temporada = temporada;
     }
     public LinkedList<Performance> getPerformances() {
