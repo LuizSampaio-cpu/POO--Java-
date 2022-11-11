@@ -23,6 +23,11 @@ public class CDUcadastraPers extends CDU{
 
     public void SalvaPers()
     {
-        
+        String id = formPersonagem.getId();
+        String nome = formPersonagem.getNome();
+
+        personagem = new Personagem(id, nome);
+        System.out.println("Salvando personagem");
+
     }
 }

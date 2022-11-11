@@ -6,9 +6,9 @@ import CDU.*;
 public class FormPersonagem extends Form{
     private String id;
     private String nome;    
-    private CDUCadastraPers cduP;
+    private CDUcadastraPers cduP;
 
-    public void setCDU(CDUCadastraPers cduP)
+    public void setCDU(CDUcadastraPers cduP)
     {
         this.cduP = cduP;
     }
