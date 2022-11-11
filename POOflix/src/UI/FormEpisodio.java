@@ -2,7 +2,7 @@ package UI;
 
 import java.io.Console;
 
-import CDU.CDUcadastraEp;
+import CDU.*;
 
 public class FormEpisodio extends Form {
     private String id;

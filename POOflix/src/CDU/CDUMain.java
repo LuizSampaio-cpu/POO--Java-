@@ -1,7 +1,7 @@
 package CDU;
 
 import UI.*;
-import domain.*;
+//import domain.*;
 
 public class CDUMain extends CDU{
     private FormMain FormMain;

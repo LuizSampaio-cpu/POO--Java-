@@ -3,12 +3,12 @@ package domain;
 import java.util.LinkedList;
 
 public class Ator {
-    private int id;
+    private String id;
     private String nome;
     private String nacionalidade;
     private LinkedList<Performance> trabalhos;
     
-    public Ator(int id, String nome, String nacionalidade, LinkedList<Performance> trabalhos) {
+    public Ator(String id, String nome, String nacionalidade, LinkedList<Performance> trabalhos) {
         this.id = id;
         this.nome = nome;
         this.nacionalidade = nacionalidade;
@@ -16,11 +16,11 @@ public class Ator {
 
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
