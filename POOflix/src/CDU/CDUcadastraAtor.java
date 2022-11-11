@@ -1,6 +1,6 @@
 package CDU;
 import UI.*;
-import java.io.Console;
+//import java.io.Console;
 import domain.*;
 
 public class CDUcadastraAtor extends CDU {
