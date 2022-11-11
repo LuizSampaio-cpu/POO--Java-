@@ -6,12 +6,12 @@ import CDU.*;
 
 
 public class FormMain extends Form{
-    private CDUMain cduMain = null;
+    private CDUMain cduMain;
 
     public void setCDU(CDUMain cduMain)
     {
         this.cduMain = cduMain;
-        this.FormMain.setCDU(this);
+       // this.FormMain.setCDU(this);
     }
 
 
