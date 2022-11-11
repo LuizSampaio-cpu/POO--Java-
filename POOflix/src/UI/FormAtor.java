@@ -1,7 +1,8 @@
 package UI;
 
 import java.io.Console;
-import CDU.*;
+
+import CDU.CDUcadastraAtor;
 
 public class FormAtor extends Form{
     private String id;
@@ -19,7 +20,7 @@ public class FormAtor extends Form{
         Console c = System.console();
         boolean termina = false;
         String continuar;
-        System.out.println("Cadastrando ator")
+        System.out.println("Cadastrando ator");
         
         while(!termina)
         {

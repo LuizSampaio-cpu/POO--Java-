@@ -22,7 +22,7 @@ public class CDUcadastraAtor extends CDU {
         return "Algum nome aí";
     }
 
-    public void SalvaAtor()
+    public void salvaAtor()
     {
         String id = formAtor.getId();
         String nome = formAtor.getNome();
