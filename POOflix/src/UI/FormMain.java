@@ -36,7 +36,7 @@ public class FormMain extends Form{
             termina = opcao.equals("3");
 
             if(!termina)
-                cdumain.processaOpcao(opcao);
+                cduMain.processaOpcao(opcao);
             
         }
         
