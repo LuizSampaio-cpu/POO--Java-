@@ -1,5 +1,5 @@
 package CDU;
-import javax.print.DocFlavor.STRING;
+
 
 import UI.*;
 import domain.*;
@@ -27,7 +27,7 @@ public class CDUcadastraPerformance extends CDU {
         Ator ator = formPerformance.getAtor();
         String idPersonagem = formPerformance.getIdPersonagem();
         Episodio episodio = formPerformance.getEpisodio();
-        performance = new Performance(ator, 0, episodio);
+        performance = new Performance(ator, idPersonagem, episodio);
         System.out.println("Salvando no banco de dados");
     }
     
