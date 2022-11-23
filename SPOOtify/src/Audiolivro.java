@@ -11,7 +11,7 @@ public class Audiolivro extends Conteudo{
 
     //constructor
     public Audiolivro(String titulo, double duracao, String editora, String narrador,
-    String resumo)
+    String resumo) throws Exception
     {
         super(titulo, duracao);
         this.editora = editora;

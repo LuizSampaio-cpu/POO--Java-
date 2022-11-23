@@ -10,7 +10,7 @@ public class Musica extends Conteudo {
     ArrayList<String> Inter;
 
     //constructor
-    public Musica(String titulo, double duracao, String genero)
+    public Musica(String titulo, double duracao, String genero) throws Exception
     {
         super(titulo, duracao);
         this.genero = genero;

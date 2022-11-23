@@ -7,7 +7,7 @@ public class Podcast extends Conteudo{
     private String resenha;
 
     //constructor
-    public Podcast(String titulo, double duracao, String host, String tema, String resenha)
+    public Podcast(String titulo, double duracao, String host, String tema, String resenha) throws Exception
     {
         super(titulo, duracao);
         this.host = host;
