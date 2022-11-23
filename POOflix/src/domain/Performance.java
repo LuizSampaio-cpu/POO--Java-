@@ -2,10 +2,10 @@ package domain;
 
 public class Performance {
     private Ator ator;
-    private int idpersonagem;
+    private String idpersonagem;
     private Episodio episodio;
 
-    public Performance(Ator ator, int idpersonagem, Episodio episodio) {
+    public Performance(Ator ator, String idpersonagem, Episodio episodio) {
         this.ator = ator;
         this.idpersonagem = idpersonagem;
         this.episodio = episodio;
@@ -16,10 +16,10 @@ public class Performance {
     public void setAtor(Ator ator) {
         this.ator = ator;
     }
-    public int getIdpersonagem() {
+    public String getIdpersonagem() {
         return idpersonagem;
     }
-    public void setIdpersonagem(int idpersonagem) {
+    public void setIdpersonagem(String idpersonagem) {
         this.idpersonagem = idpersonagem;
     }
     public Episodio getepisodio() {
