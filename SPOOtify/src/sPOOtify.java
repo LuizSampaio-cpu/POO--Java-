@@ -3,7 +3,7 @@ package src;
 import java.util.Scanner;
 
 public class sPOOtify {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Playlist list = new Playlist("Rock");
         Musica mus;
         Podcast pod;
