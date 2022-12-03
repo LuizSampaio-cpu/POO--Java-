@@ -4,6 +4,14 @@ import java.io.Console;
 
 import CDU.*;
 
+/*
+ * Classe formulário.
+ * Todo formulário do sistea deve ser capaz de exibir sua aparência 
+ * para o usuário e contrlolar a interação com o suuário.
+ * A lógica de exibição da aparência e controle da conversação com
+ * o usuário deve ser implementada no método exibe.
+ */
+
 public class FormEpisodio extends Form {
     private String id;
     private String idserie;

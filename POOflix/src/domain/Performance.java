@@ -10,6 +10,8 @@ public class Performance implements OBJPOOFlix{
         this.idpersonagem = idpersonagem;
         this.episodio = episodio;
     }
+    public Performance(String id, String titulo, int i, Object object, Object object2) {
+    }
     public Ator getAtor() {
         return ator;
     }
