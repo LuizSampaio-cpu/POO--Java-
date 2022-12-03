@@ -3,7 +3,7 @@ package domain;
 import java.util.HashMap;
 import java.util.LinkedList;
 
-public class Serie {
+public class Serie implements OBJPOOFlix{
     private String id;
     private String titulo;
     private int clas_idade;

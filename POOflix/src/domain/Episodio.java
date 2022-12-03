@@ -2,7 +2,7 @@ package domain;
 
 import java.util.LinkedList;
 
-public class Episodio {
+public class Episodio implements OBJPOOFlix{
     private String id;
     private String titulo;
     private String resumo;
@@ -19,7 +19,10 @@ public class Episodio {
         this.temporada = temporada;
 
     }
-    
+    public void adPerformance(Performance p)
+    {
+        performances.add(p);
+    }
     
     public String getId() {
         return id;
@@ -52,15 +55,19 @@ public class Episodio {
     public void setTemporada(String temporada) {
         this.temporada = temporada;
     }
+   
     public LinkedList<Performance> getPerformances() {
         return performances;
     }
+   
     public void setPerformances(LinkedList<Performance> performances) {
         this.performances = performances;
     }
+   
     public Serie getSerie() {
         return serie;
     }
+   
     public void setSerie(Serie serie) {
         if(serie == null)
             this.serie = serie;

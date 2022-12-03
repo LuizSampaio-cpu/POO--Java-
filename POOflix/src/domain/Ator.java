@@ -2,7 +2,7 @@ package domain;
 
 import java.util.LinkedList;
 
-public class Ator {
+public class Ator implements OBJPOOFlix{
     private String id;
     private String nome;
     private String nacionalidade;

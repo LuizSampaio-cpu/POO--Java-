@@ -2,15 +2,27 @@ package CDU;
 
 import domain.*;
 import UI.*;
+import java.sql.Connection;
 
 public class CDUcadastraEp extends CDU{
     private Episodio episodio = null;
     private FormEpisodio formEpisodio;
 
-    public CDUcadastraEp (FormEpisodio formEpisodio) {
+    /*Associa este caso de uso ao seu respectivo formulário */
+    public CDUcadastraEp (FormEpisodio formEpisodio, Connection cnxaobd) {
         this.formEpisodio = formEpisodio;
         this.formEpisodio.setCDU(this);
+        conexaobd = cnxaobd;
     }
+    /*
+     * Exibe a interface do usuário para este caso de uso.
+     * A partir daqui este objeto cdu fica ativo e 'conversando' com
+     * o respectivo formulário. Toda escolha de tarefa sinalizada no formulário
+     * deve ser executada por este cdu.
+     * 
+     * O cdu deve oferecer métodos para CADA funcionalidade disponibilizada pelo
+     * formulário ao usuário.
+     */
     public void exec()
     {
         formEpisodio.exibe();
@@ -24,7 +36,7 @@ public class CDUcadastraEp extends CDU{
     }
     public void salvarEpisodio() {
         String id = formEpisodio.getId();
-        String idserie = formEpisodio.getIdserie();
+       // String idserie = formEpisodio.getIdserie();
         String temporada = formEpisodio.getTemporada();
         String titulo = formEpisodio.getTitulo();
         String resumo = formEpisodio.getResumo();
