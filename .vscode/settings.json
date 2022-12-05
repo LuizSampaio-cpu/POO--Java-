@@ -8,5 +8,8 @@
         "SPOOtify",
         "Comboio",
         "POOflix/src"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
     ]
 }
